@@ -62,7 +62,7 @@ namespace SPP_LR2
             foreach (DirectoryInfo d in directoryInfo.GetDirectories())
             {
                 Directory.CreateDirectory(pathWhere + @"\" + d.Name);
-                copyFiles1(pathFrom + @"\" + d.Name, pathWhere + @"\" + d.Name);
+                copyFilesThreadPool(pathFrom + @"\" + d.Name, pathWhere + @"\" + d.Name);
             }
 
         }
